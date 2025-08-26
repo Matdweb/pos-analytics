@@ -1,0 +1,623 @@
+WARN 	 main Node	 DB Connection no longer available. Go to advanced settings to enable connection restoration.
+WARN 	 main Node	 Selected database driver is deprecated.
+The selected database driver is outdated and might contain security vulnerabilities. It will be moved to a separate extension that requires manual installation with one of the next releases.
+ERROR	 KNIME-Worker-7-DB Writer 3:2 Node	 Execute failed: Violation of PRIMARY KEY constraint 'PK__DimSuppl__4BE6669474246F63'. Cannot insert duplicate key in object 'dbo.DimSupplier'. The duplicate key value is (1).
+java.sql.BatchUpdateException: Violation of PRIMARY KEY constraint 'PK__DimSuppl__4BE6669474246F63'. Cannot insert duplicate key in object 'dbo.DimSupplier'. The duplicate key value is (1).
+	at net.sourceforge.jtds.jdbc.JtdsStatement.executeBatch(JtdsStatement.java:1069)
+	at org.knime.database.connection.wrappers.AbstractStatementWrapper.executeBatch(AbstractStatementWrapper.java:229)
+	at org.knime.database.connection.wrappers.AbstractStatementWrapper.executeBatch(AbstractStatementWrapper.java:229)
+	at org.knime.database.connection.wrappers.AbstractStatementWrapper.executeBatch(AbstractStatementWrapper.java:229)
+	at org.knime.database.connection.impl.monitored.MonitoredPreparedStatement.executeBatch(MonitoredPreparedStatement.java:102)
+	at org.knime.database.connection.wrappers.AbstractStatementWrapper.executeBatch(AbstractStatementWrapper.java:229)
+	at org.knime.database.agent.writer.impl.DefaultDatabaseWriterExecutor.executeBatchAndSendStatuses(DefaultDatabaseWriterExecutor.java:321)
+	at org.knime.database.agent.writer.impl.DefaultDatabaseWriterExecutor.executeLeftOverRows(DefaultDatabaseWriterExecutor.java:401)
+	at org.knime.database.agent.writer.impl.DefaultDatabaseWriterExecutor.executeInBatchMode(DefaultDatabaseWriterExecutor.java:267)
+	at org.knime.database.agent.writer.impl.DefaultDatabaseWriterExecutor.execute(DefaultDatabaseWriterExecutor.java:99)
+	at org.knime.database.agent.writer.impl.DefaultDBWriter.insert(DefaultDBWriter.java:224)
+	at org.knime.database.node.io.insert.DBInsertNodeModel.executeWriter(DBInsertNodeModel.java:93)
+	at org.knime.database.node.io.write.DBWriteNodeModel.executeWriter(DBWriteNodeModel.java:174)
+	at org.knime.database.node.io.insert.DBInsertNodeModel.executeWriter(DBInsertNodeModel.java:1)
+	at org.knime.database.node.io.DBManipulationNodeModel.executeStreamable(DBManipulationNodeModel.java:412)
+	at org.knime.database.node.io.DBManipulationNodeModel.execute(DBManipulationNodeModel.java:346)
+	at org.knime.core.node.NodeModel.executeModel(NodeModel.java:596)
+	at org.knime.core.node.Node.invokeFullyNodeModelExecute(Node.java:1284)
+	at org.knime.core.node.Node.execute(Node.java:1049)
+	at org.knime.core.node.workflow.NativeNodeContainer.performExecuteNode(NativeNodeContainer.java:603)
+	at org.knime.core.node.exec.LocalNodeExecutionJob.mainExecute(LocalNodeExecutionJob.java:98)
+	at org.knime.core.node.workflow.NodeExecutionJob.internalRun(NodeExecutionJob.java:198)
+	at org.knime.core.node.workflow.NodeExecutionJob.run(NodeExecutionJob.java:117)
+	at org.knime.core.util.ThreadUtils$RunnableWithContextImpl.runWithContext(ThreadUtils.java:369)
+	at org.knime.core.util.ThreadUtils$RunnableWithContext.run(ThreadUtils.java:223)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+ERROR	 KNIME-Worker-1-DB Writer 3:16 Node	 Execute failed: Violation of PRIMARY KEY constraint 'PK__DimCusto__A4AE64B8ED42370E'. Cannot insert duplicate key in object 'dbo.DimCustomer'. The duplicate key value is (CUST0001).
+java.sql.BatchUpdateException: Violation of PRIMARY KEY constraint 'PK__DimCusto__A4AE64B8ED42370E'. Cannot insert duplicate key in object 'dbo.DimCustomer'. The duplicate key value is (CUST0001).
+	at net.sourceforge.jtds.jdbc.JtdsStatement.executeBatch(JtdsStatement.java:1069)
+	at org.knime.database.connection.wrappers.AbstractStatementWrapper.executeBatch(AbstractStatementWrapper.java:229)
+	at org.knime.database.connection.wrappers.AbstractStatementWrapper.executeBatch(AbstractStatementWrapper.java:229)
+	at org.knime.database.connection.wrappers.AbstractStatementWrapper.executeBatch(AbstractStatementWrapper.java:229)
+	at org.knime.database.connection.impl.monitored.MonitoredPreparedStatement.executeBatch(MonitoredPreparedStatement.java:102)
+	at org.knime.database.connection.wrappers.AbstractStatementWrapper.executeBatch(AbstractStatementWrapper.java:229)
+	at org.knime.database.agent.writer.impl.DefaultDatabaseWriterExecutor.executeBatchAndSendStatuses(DefaultDatabaseWriterExecutor.java:321)
+	at org.knime.database.agent.writer.impl.DefaultDatabaseWriterExecutor.executeLeftOverRows(DefaultDatabaseWriterExecutor.java:401)
+	at org.knime.database.agent.writer.impl.DefaultDatabaseWriterExecutor.executeInBatchMode(DefaultDatabaseWriterExecutor.java:267)
+	at org.knime.database.agent.writer.impl.DefaultDatabaseWriterExecutor.execute(DefaultDatabaseWriterExecutor.java:99)
+	at org.knime.database.agent.writer.impl.DefaultDBWriter.insert(DefaultDBWriter.java:224)
+	at org.knime.database.node.io.insert.DBInsertNodeModel.executeWriter(DBInsertNodeModel.java:93)
+	at org.knime.database.node.io.write.DBWriteNodeModel.executeWriter(DBWriteNodeModel.java:174)
+	at org.knime.database.node.io.insert.DBInsertNodeModel.executeWriter(DBInsertNodeModel.java:1)
+	at org.knime.database.node.io.DBManipulationNodeModel.executeStreamable(DBManipulationNodeModel.java:412)
+	at org.knime.database.node.io.DBManipulationNodeModel.execute(DBManipulationNodeModel.java:346)
+	at org.knime.core.node.NodeModel.executeModel(NodeModel.java:596)
+	at org.knime.core.node.Node.invokeFullyNodeModelExecute(Node.java:1284)
+	at org.knime.core.node.Node.execute(Node.java:1049)
+	at org.knime.core.node.workflow.NativeNodeContainer.performExecuteNode(NativeNodeContainer.java:603)
+	at org.knime.core.node.exec.LocalNodeExecutionJob.mainExecute(LocalNodeExecutionJob.java:98)
+	at org.knime.core.node.workflow.NodeExecutionJob.internalRun(NodeExecutionJob.java:198)
+	at org.knime.core.node.workflow.NodeExecutionJob.run(NodeExecutionJob.java:117)
+	at org.knime.core.util.ThreadUtils$RunnableWithContextImpl.runWithContext(ThreadUtils.java:369)
+	at org.knime.core.util.ThreadUtils$RunnableWithContext.run(ThreadUtils.java:223)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+ERROR	 KNIME-Worker-6-DB Writer 3:12 Node	 Execute failed: Violation of PRIMARY KEY constraint 'PK__DimProdu__B40CC6EDC09DAA12'. Cannot insert duplicate key in object 'dbo.DimProduct'. The duplicate key value is (1).
+java.sql.BatchUpdateException: Violation of PRIMARY KEY constraint 'PK__DimProdu__B40CC6EDC09DAA12'. Cannot insert duplicate key in object 'dbo.DimProduct'. The duplicate key value is (1).
+	at net.sourceforge.jtds.jdbc.JtdsStatement.executeBatch(JtdsStatement.java:1069)
+	at org.knime.database.connection.wrappers.AbstractStatementWrapper.executeBatch(AbstractStatementWrapper.java:229)
+	at org.knime.database.connection.wrappers.AbstractStatementWrapper.executeBatch(AbstractStatementWrapper.java:229)
+	at org.knime.database.connection.wrappers.AbstractStatementWrapper.executeBatch(AbstractStatementWrapper.java:229)
+	at org.knime.database.connection.impl.monitored.MonitoredPreparedStatement.executeBatch(MonitoredPreparedStatement.java:102)
+	at org.knime.database.connection.wrappers.AbstractStatementWrapper.executeBatch(AbstractStatementWrapper.java:229)
+	at org.knime.database.agent.writer.impl.DefaultDatabaseWriterExecutor.executeBatchAndSendStatuses(DefaultDatabaseWriterExecutor.java:321)
+	at org.knime.database.agent.writer.impl.DefaultDatabaseWriterExecutor.executeLeftOverRows(DefaultDatabaseWriterExecutor.java:401)
+	at org.knime.database.agent.writer.impl.DefaultDatabaseWriterExecutor.executeInBatchMode(DefaultDatabaseWriterExecutor.java:267)
+	at org.knime.database.agent.writer.impl.DefaultDatabaseWriterExecutor.execute(DefaultDatabaseWriterExecutor.java:99)
+	at org.knime.database.agent.writer.impl.DefaultDBWriter.insert(DefaultDBWriter.java:224)
+	at org.knime.database.node.io.insert.DBInsertNodeModel.executeWriter(DBInsertNodeModel.java:93)
+	at org.knime.database.node.io.write.DBWriteNodeModel.executeWriter(DBWriteNodeModel.java:174)
+	at org.knime.database.node.io.insert.DBInsertNodeModel.executeWriter(DBInsertNodeModel.java:1)
+	at org.knime.database.node.io.DBManipulationNodeModel.executeStreamable(DBManipulationNodeModel.java:412)
+	at org.knime.database.node.io.DBManipulationNodeModel.execute(DBManipulationNodeModel.java:346)
+	at org.knime.core.node.NodeModel.executeModel(NodeModel.java:596)
+	at org.knime.core.node.Node.invokeFullyNodeModelExecute(Node.java:1284)
+	at org.knime.core.node.Node.execute(Node.java:1049)
+	at org.knime.core.node.workflow.NativeNodeContainer.performExecuteNode(NativeNodeContainer.java:603)
+	at org.knime.core.node.exec.LocalNodeExecutionJob.mainExecute(LocalNodeExecutionJob.java:98)
+	at org.knime.core.node.workflow.NodeExecutionJob.internalRun(NodeExecutionJob.java:198)
+	at org.knime.core.node.workflow.NodeExecutionJob.run(NodeExecutionJob.java:117)
+	at org.knime.core.util.ThreadUtils$RunnableWithContextImpl.runWithContext(ThreadUtils.java:369)
+	at org.knime.core.util.ThreadUtils$RunnableWithContext.run(ThreadUtils.java:223)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+ERROR	 KNIME-Worker-3-DB Writer 3:20 Node	 Execute failed: Violation of PRIMARY KEY constraint 'PK__DimEmplo__7AD04FF127CF9C60'. Cannot insert duplicate key in object 'dbo.DimEmployee'. The duplicate key value is (1).
+java.sql.BatchUpdateException: Violation of PRIMARY KEY constraint 'PK__DimEmplo__7AD04FF127CF9C60'. Cannot insert duplicate key in object 'dbo.DimEmployee'. The duplicate key value is (1).
+	at net.sourceforge.jtds.jdbc.JtdsStatement.executeBatch(JtdsStatement.java:1069)
+	at org.knime.database.connection.wrappers.AbstractStatementWrapper.executeBatch(AbstractStatementWrapper.java:229)
+	at org.knime.database.connection.wrappers.AbstractStatementWrapper.executeBatch(AbstractStatementWrapper.java:229)
+	at org.knime.database.connection.wrappers.AbstractStatementWrapper.executeBatch(AbstractStatementWrapper.java:229)
+	at org.knime.database.connection.impl.monitored.MonitoredPreparedStatement.executeBatch(MonitoredPreparedStatement.java:102)
+	at org.knime.database.connection.wrappers.AbstractStatementWrapper.executeBatch(AbstractStatementWrapper.java:229)
+	at org.knime.database.agent.writer.impl.DefaultDatabaseWriterExecutor.executeBatchAndSendStatuses(DefaultDatabaseWriterExecutor.java:321)
+	at org.knime.database.agent.writer.impl.DefaultDatabaseWriterExecutor.executeLeftOverRows(DefaultDatabaseWriterExecutor.java:401)
+	at org.knime.database.agent.writer.impl.DefaultDatabaseWriterExecutor.executeInBatchMode(DefaultDatabaseWriterExecutor.java:267)
+	at org.knime.database.agent.writer.impl.DefaultDatabaseWriterExecutor.execute(DefaultDatabaseWriterExecutor.java:99)
+	at org.knime.database.agent.writer.impl.DefaultDBWriter.insert(DefaultDBWriter.java:224)
+	at org.knime.database.node.io.insert.DBInsertNodeModel.executeWriter(DBInsertNodeModel.java:93)
+	at org.knime.database.node.io.write.DBWriteNodeModel.executeWriter(DBWriteNodeModel.java:174)
+	at org.knime.database.node.io.insert.DBInsertNodeModel.executeWriter(DBInsertNodeModel.java:1)
+	at org.knime.database.node.io.DBManipulationNodeModel.executeStreamable(DBManipulationNodeModel.java:412)
+	at org.knime.database.node.io.DBManipulationNodeModel.execute(DBManipulationNodeModel.java:346)
+	at org.knime.core.node.NodeModel.executeModel(NodeModel.java:596)
+	at org.knime.core.node.Node.invokeFullyNodeModelExecute(Node.java:1284)
+	at org.knime.core.node.Node.execute(Node.java:1049)
+	at org.knime.core.node.workflow.NativeNodeContainer.performExecuteNode(NativeNodeContainer.java:603)
+	at org.knime.core.node.exec.LocalNodeExecutionJob.mainExecute(LocalNodeExecutionJob.java:98)
+	at org.knime.core.node.workflow.NodeExecutionJob.internalRun(NodeExecutionJob.java:198)
+	at org.knime.core.node.workflow.NodeExecutionJob.run(NodeExecutionJob.java:117)
+	at org.knime.core.util.ThreadUtils$RunnableWithContextImpl.runWithContext(ThreadUtils.java:369)
+	at org.knime.core.util.ThreadUtils$RunnableWithContext.run(ThreadUtils.java:223)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+
+
+===== KNIME RUN START 2025-08-11T03:31:01.956492Z =====
+Command: C:\Users\MAT_C\AppData\Local\Programs\KNIME\knime.exe -nosplash -application org.knime.product.KNIME_BATCH_APPLICATION -workflowFile=C:\Users\MAT_C\Desktop\U fidelitas\Data-warehouse-bases-de-datos-multidimensionales\proyecto\Proyecto_DataWarehouse-SQL\KNIME_retail.knwf -consoleLog
+
+===== KNIME RUN END 2025-08-11T03:31:20.439304Z ReturnCode=4 =====
+WARN 	 main Node	 DB Connection no longer available. Go to advanced settings to enable connection restoration.
+WARN 	 main Node	 Selected database driver is deprecated.
+The selected database driver is outdated and might contain security vulnerabilities. It will be moved to a separate extension that requires manual installation with one of the next releases.
+WARN 	 main Node	 The node configuration changed and the table spec will be recalculated during execution.
+WARN 	 main Node	 Node created an empty data table.
+WARN 	 main Node	 Node created an empty data table.
+WARN 	 main Node	 Node created an empty data table.
+WARN 	 main Node	 Node created an empty data table.
+WARN 	 main Node	 Node created an empty data table.
+WARN 	 main Node	 Node created an empty data table.
+WARN 	 main Node	 Node created an empty data table.
+WARN 	 main Node	 Node created an empty data table.
+WARN 	 KNIME-Worker-8-Joiner 3:59 Node	 Node created an empty data table.
+WARN 	 KNIME-Worker-4-DB Writer 3:16 Node	 Node created an empty data table.
+Aug 13, 2025 9:08:25 PM org.apache.cxf.phase.PhaseInterceptorChain doDefaultLogging
+ADVERTENCIA: Interceptor for {http://127.0.0.1:8000/employees/list}WebClient has thrown exception, unwinding now
+org.apache.cxf.interceptor.Fault: Could not send Message.
+	at org.apache.cxf.interceptor.MessageSenderInterceptor$MessageSenderEndingInterceptor.handleMessage(MessageSenderInterceptor.java:67)
+	at org.apache.cxf.phase.PhaseInterceptorChain.doIntercept(PhaseInterceptorChain.java:307)
+	at org.apache.cxf.jaxrs.client.AbstractClient.doRunInterceptorChain(AbstractClient.java:717)
+	at org.apache.cxf.jaxrs.client.WebClient.doChainedInvocation(WebClient.java:1085)
+	at org.apache.cxf.jaxrs.client.WebClient.doInvoke(WebClient.java:931)
+	at org.apache.cxf.jaxrs.client.WebClient.doInvoke(WebClient.java:900)
+	at org.apache.cxf.jaxrs.client.WebClient.invoke(WebClient.java:460)
+	at org.apache.cxf.jaxrs.client.SyncInvokerImpl.method(SyncInvokerImpl.java:150)
+	at org.apache.cxf.jaxrs.client.spec.InvocationBuilderImpl.method(InvocationBuilderImpl.java:127)
+	at org.apache.cxf.jaxrs.client.spec.InvocationBuilderImpl$InvocationImpl.invoke(InvocationBuilderImpl.java:355)
+	at org.knime.rest.nodes.common.AbstractRequestExecutor.lambda$1(AbstractRequestExecutor.java:297)
+	at org.knime.rest.util.DelayPolicy.doWithDelays(DelayPolicy.java:184)
+	at org.knime.rest.nodes.common.AbstractRequestExecutor.performSingleRequest(AbstractRequestExecutor.java:296)
+	at org.knime.rest.nodes.common.AbstractRequestExecutor.makeFirstCall(AbstractRequestExecutor.java:346)
+	at org.knime.rest.nodes.common.RestNodeModel.makeFirstCall(RestNodeModel.java:856)
+	at org.knime.rest.nodes.common.RestNodeModel.execute(RestNodeModel.java:478)
+	at org.knime.core.node.NodeModel.executeModel(NodeModel.java:596)
+	at org.knime.core.node.Node.invokeFullyNodeModelExecute(Node.java:1284)
+	at org.knime.core.node.Node.execute(Node.java:1049)
+	at org.knime.core.node.workflow.NativeNodeContainer.performExecuteNode(NativeNodeContainer.java:603)
+	at org.knime.core.node.exec.LocalNodeExecutionJob.mainExecute(LocalNodeExecutionJob.java:98)
+	at org.knime.core.node.workflow.NodeExecutionJob.internalRun(NodeExecutionJob.java:198)
+	at org.knime.core.node.workflow.NodeExecutionJob.run(NodeExecutionJob.java:117)
+	at org.knime.core.util.ThreadUtils$RunnableWithContextImpl.runWithContext(ThreadUtils.java:369)
+	at org.knime.core.util.ThreadUtils$RunnableWithContext.run(ThreadUtils.java:223)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+Caused by: java.net.ConnectException: ConnectException invoking http://127.0.0.1:8000/employees/list: Connection refused: no further information
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Unknown Source)
+	at java.base/java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.apache.cxf.transport.http.HTTPConduit$WrappedOutputStream.mapException(HTTPConduit.java:1452)
+	at org.apache.cxf.transport.http.HTTPConduit$WrappedOutputStream.close(HTTPConduit.java:1433)
+	at org.apache.cxf.io.AbstractWrappedOutputStream.close(AbstractWrappedOutputStream.java:77)
+	at org.apache.cxf.transport.AbstractConduit.close(AbstractConduit.java:56)
+	at org.apache.cxf.transport.http.HTTPConduit.close(HTTPConduit.java:717)
+	at org.apache.cxf.transport.http.HttpClientHTTPConduit.close(HttpClientHTTPConduit.java:115)
+	at org.apache.cxf.interceptor.MessageSenderInterceptor$MessageSenderEndingInterceptor.handleMessage(MessageSenderInterceptor.java:63)
+	... 28 more
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Unknown Source)
+	at java.base/java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection$10.run(Unknown Source)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection$10.run(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Unknown Source)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getChainedException(Unknown Source)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream0(Unknown Source)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream(Unknown Source)
+	at java.base/java.net.HttpURLConnection.getResponseCode(Unknown Source)
+	at org.apache.cxf.transport.http.URLConnectionHTTPConduit$URLConnectionWrappedOutputStream$2.run(URLConnectionHTTPConduit.java:370)
+	at org.apache.cxf.transport.http.URLConnectionHTTPConduit$URLConnectionWrappedOutputStream$2.run(URLConnectionHTTPConduit.java:366)
+	at java.base/java.security.AccessController.doPrivileged(Unknown Source)
+	at org.apache.cxf.transport.http.URLConnectionHTTPConduit$URLConnectionWrappedOutputStream.getResponseCode(URLConnectionHTTPConduit.java:366)
+	at org.apache.cxf.transport.http.HTTPConduit$WrappedOutputStream.processRetransmit(HTTPConduit.java:1503)
+	at org.apache.cxf.transport.http.HTTPConduit$WrappedOutputStream.handleRetransmits(HTTPConduit.java:1490)
+	at org.apache.cxf.transport.http.HTTPConduit$WrappedOutputStream.handleResponse(HTTPConduit.java:1621)
+	at org.apache.cxf.transport.http.HTTPConduit$WrappedOutputStream.close(HTTPConduit.java:1420)
+	... 33 more
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Unknown Source)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(Unknown Source)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(Unknown Source)
+	at java.base/java.net.Socket.connect(Unknown Source)
+	at java.base/sun.net.NetworkClient.doConnect(Unknown Source)
+	at java.base/sun.net.www.http.HttpClient.openServer(Unknown Source)
+	at java.base/sun.net.www.http.HttpClient.openServer(Unknown Source)
+	at java.base/sun.net.www.http.HttpClient.<init>(Unknown Source)
+	at java.base/sun.net.www.http.HttpClient.New(Unknown Source)
+	at java.base/sun.net.www.http.HttpClient.New(Unknown Source)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(Unknown Source)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(Unknown Source)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(Unknown Source)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(Unknown Source)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream0(Unknown Source)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream(Unknown Source)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getHeaderFields(Unknown Source)
+	at org.apache.cxf.transport.http.Headers.readFromConnection(Headers.java:280)
+	at org.apache.cxf.transport.http.URLConnectionHTTPConduit$URLConnectionWrappedOutputStream.updateCookiesBeforeRetransmit(URLConnectionHTTPConduit.java:330)
+	at org.apache.cxf.transport.http.HTTPConduit$WrappedOutputStream.handleRetransmits(HTTPConduit.java:1488)
+	... 35 more
+
+WARN 	 KNIME-Worker-3-GET Request 3:50 AbstractRequestExecutor	 Call #1 failed: java.net.ConnectException: ConnectException invoking http://127.0.0.1:8000/employees/list: Connection refused: no further information
+jakarta.ws.rs.ProcessingException: java.net.ConnectException: ConnectException invoking http://127.0.0.1:8000/employees/list: Connection refused: no further information
+	at org.apache.cxf.jaxrs.client.AbstractClient.checkClientException(AbstractClient.java:645)
+	at org.apache.cxf.jaxrs.client.AbstractClient.preProcessResult(AbstractClient.java:619)
+	at org.apache.cxf.jaxrs.client.WebClient.doResponse(WebClient.java:1149)
+	at org.apache.cxf.jaxrs.client.WebClient.doChainedInvocation(WebClient.java:1086)
+	at org.apache.cxf.jaxrs.client.WebClient.doInvoke(WebClient.java:931)
+	at org.apache.cxf.jaxrs.client.WebClient.doInvoke(WebClient.java:900)
+	at org.apache.cxf.jaxrs.client.WebClient.invoke(WebClient.java:460)
+	at org.apache.cxf.jaxrs.client.SyncInvokerImpl.method(SyncInvokerImpl.java:150)
+	at org.apache.cxf.jaxrs.client.spec.InvocationBuilderImpl.method(InvocationBuilderImpl.java:127)
+	at org.apache.cxf.jaxrs.client.spec.InvocationBuilderImpl$InvocationImpl.invoke(InvocationBuilderImpl.java:355)
+	at org.knime.rest.nodes.common.AbstractRequestExecutor.lambda$1(AbstractRequestExecutor.java:297)
+	at org.knime.rest.util.DelayPolicy.doWithDelays(DelayPolicy.java:184)
+	at org.knime.rest.nodes.common.AbstractRequestExecutor.performSingleRequest(AbstractRequestExecutor.java:296)
+	at org.knime.rest.nodes.common.AbstractRequestExecutor.makeFirstCall(AbstractRequestExecutor.java:346)
+	at org.knime.rest.nodes.common.RestNodeModel.makeFirstCall(RestNodeModel.java:856)
+	at org.knime.rest.nodes.common.RestNodeModel.execute(RestNodeModel.java:478)
+	at org.knime.core.node.NodeModel.executeModel(NodeModel.java:596)
+	at org.knime.core.node.Node.invokeFullyNodeModelExecute(Node.java:1284)
+	at org.knime.core.node.Node.execute(Node.java:1049)
+	at org.knime.core.node.workflow.NativeNodeContainer.performExecuteNode(NativeNodeContainer.java:603)
+	at org.knime.core.node.exec.LocalNodeExecutionJob.mainExecute(LocalNodeExecutionJob.java:98)
+	at org.knime.core.node.workflow.NodeExecutionJob.internalRun(NodeExecutionJob.java:198)
+	at org.knime.core.node.workflow.NodeExecutionJob.run(NodeExecutionJob.java:117)
+	at org.knime.core.util.ThreadUtils$RunnableWithContextImpl.runWithContext(ThreadUtils.java:369)
+	at org.knime.core.util.ThreadUtils$RunnableWithContext.run(ThreadUtils.java:223)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+Caused by: java.net.ConnectException: ConnectException invoking http://127.0.0.1:8000/employees/list: Connection refused: no further information
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Unknown Source)
+	at java.base/java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.apache.cxf.transport.http.HTTPConduit$WrappedOutputStream.mapException(HTTPConduit.java:1452)
+	at org.apache.cxf.transport.http.HTTPConduit$WrappedOutputStream.close(HTTPConduit.java:1433)
+	at org.apache.cxf.io.AbstractWrappedOutputStream.close(AbstractWrappedOutputStream.java:77)
+	at org.apache.cxf.transport.AbstractConduit.close(AbstractConduit.java:56)
+	at org.apache.cxf.transport.http.HTTPConduit.close(HTTPConduit.java:717)
+	at org.apache.cxf.transport.http.HttpClientHTTPConduit.close(HttpClientHTTPConduit.java:115)
+	at org.apache.cxf.interceptor.MessageSenderInterceptor$MessageSenderEndingInterceptor.handleMessage(MessageSenderInterceptor.java:63)
+	at org.apache.cxf.phase.PhaseInterceptorChain.doIntercept(PhaseInterceptorChain.java:307)
+	at org.apache.cxf.jaxrs.client.AbstractClient.doRunInterceptorChain(AbstractClient.java:717)
+	at org.apache.cxf.jaxrs.client.WebClient.doChainedInvocation(WebClient.java:1085)
+	... 25 more
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Unknown Source)
+	at java.base/java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection$10.run(Unknown Source)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection$10.run(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Unknown Source)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getChainedException(Unknown Source)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream0(Unknown Source)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream(Unknown Source)
+	at java.base/java.net.HttpURLConnection.getResponseCode(Unknown Source)
+	at org.apache.cxf.transport.http.URLConnectionHTTPConduit$URLConnectionWrappedOutputStream$2.run(URLConnectionHTTPConduit.java:370)
+	at org.apache.cxf.transport.http.URLConnectionHTTPConduit$URLConnectionWrappedOutputStream$2.run(URLConnectionHTTPConduit.java:366)
+	at java.base/java.security.AccessController.doPrivileged(Unknown Source)
+	at org.apache.cxf.transport.http.URLConnectionHTTPConduit$URLConnectionWrappedOutputStream.getResponseCode(URLConnectionHTTPConduit.java:366)
+	at org.apache.cxf.transport.http.HTTPConduit$WrappedOutputStream.processRetransmit(HTTPConduit.java:1503)
+	at org.apache.cxf.transport.http.HTTPConduit$WrappedOutputStream.handleRetransmits(HTTPConduit.java:1490)
+	at org.apache.cxf.transport.http.HTTPConduit$WrappedOutputStream.handleResponse(HTTPConduit.java:1621)
+	at org.apache.cxf.transport.http.HTTPConduit$WrappedOutputStream.close(HTTPConduit.java:1420)
+	... 33 more
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Unknown Source)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(Unknown Source)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(Unknown Source)
+	at java.base/java.net.Socket.connect(Unknown Source)
+	at java.base/sun.net.NetworkClient.doConnect(Unknown Source)
+	at java.base/sun.net.www.http.HttpClient.openServer(Unknown Source)
+	at java.base/sun.net.www.http.HttpClient.openServer(Unknown Source)
+	at java.base/sun.net.www.http.HttpClient.<init>(Unknown Source)
+	at java.base/sun.net.www.http.HttpClient.New(Unknown Source)
+	at java.base/sun.net.www.http.HttpClient.New(Unknown Source)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(Unknown Source)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(Unknown Source)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(Unknown Source)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(Unknown Source)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream0(Unknown Source)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream(Unknown Source)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getHeaderFields(Unknown Source)
+	at org.apache.cxf.transport.http.Headers.readFromConnection(Headers.java:280)
+	at org.apache.cxf.transport.http.URLConnectionHTTPConduit$URLConnectionWrappedOutputStream.updateCookiesBeforeRetransmit(URLConnectionHTTPConduit.java:330)
+	at org.apache.cxf.transport.http.HTTPConduit$WrappedOutputStream.handleRetransmits(HTTPConduit.java:1488)
+	... 35 more
+WARN 	 KNIME-Worker-12-String Manipulation 3:22 ColumnCalculator	 Row "Row0" contains missing value in column "LastName" - returning missing (omitting further warnings)
+ERROR	 KNIME-Worker-10-DB Writer 3:20 Node	 Execute failed: Cannot insert the value NULL into column 'EmployeeID', table 'Northwind.dbo.DimEmployee'; column does not allow nulls. INSERT fails.
+java.sql.BatchUpdateException: Cannot insert the value NULL into column 'EmployeeID', table 'Northwind.dbo.DimEmployee'; column does not allow nulls. INSERT fails.
+	at net.sourceforge.jtds.jdbc.JtdsStatement.executeBatch(JtdsStatement.java:1069)
+	at org.knime.database.connection.wrappers.AbstractStatementWrapper.executeBatch(AbstractStatementWrapper.java:229)
+	at org.knime.database.connection.wrappers.AbstractStatementWrapper.executeBatch(AbstractStatementWrapper.java:229)
+	at org.knime.database.connection.wrappers.AbstractStatementWrapper.executeBatch(AbstractStatementWrapper.java:229)
+	at org.knime.database.connection.impl.monitored.MonitoredPreparedStatement.executeBatch(MonitoredPreparedStatement.java:102)
+	at org.knime.database.connection.wrappers.AbstractStatementWrapper.executeBatch(AbstractStatementWrapper.java:229)
+	at org.knime.database.agent.writer.impl.DefaultDatabaseWriterExecutor.executeBatchAndSendStatuses(DefaultDatabaseWriterExecutor.java:321)
+	at org.knime.database.agent.writer.impl.DefaultDatabaseWriterExecutor.executeLeftOverRows(DefaultDatabaseWriterExecutor.java:401)
+	at org.knime.database.agent.writer.impl.DefaultDatabaseWriterExecutor.executeInBatchMode(DefaultDatabaseWriterExecutor.java:267)
+	at org.knime.database.agent.writer.impl.DefaultDatabaseWriterExecutor.execute(DefaultDatabaseWriterExecutor.java:99)
+	at org.knime.database.agent.writer.impl.DefaultDBWriter.insert(DefaultDBWriter.java:224)
+	at org.knime.database.node.io.insert.DBInsertNodeModel.executeWriter(DBInsertNodeModel.java:93)
+	at org.knime.database.node.io.write.DBWriteNodeModel.executeWriter(DBWriteNodeModel.java:174)
+	at org.knime.database.node.io.insert.DBInsertNodeModel.executeWriter(DBInsertNodeModel.java:1)
+	at org.knime.database.node.io.DBManipulationNodeModel.executeStreamable(DBManipulationNodeModel.java:412)
+	at org.knime.database.node.io.DBManipulationNodeModel.execute(DBManipulationNodeModel.java:346)
+	at org.knime.core.node.NodeModel.executeModel(NodeModel.java:596)
+	at org.knime.core.node.Node.invokeFullyNodeModelExecute(Node.java:1284)
+	at org.knime.core.node.Node.execute(Node.java:1049)
+	at org.knime.core.node.workflow.NativeNodeContainer.performExecuteNode(NativeNodeContainer.java:603)
+	at org.knime.core.node.exec.LocalNodeExecutionJob.mainExecute(LocalNodeExecutionJob.java:98)
+	at org.knime.core.node.workflow.NodeExecutionJob.internalRun(NodeExecutionJob.java:198)
+	at org.knime.core.node.workflow.NodeExecutionJob.run(NodeExecutionJob.java:117)
+	at org.knime.core.util.ThreadUtils$RunnableWithContextImpl.runWithContext(ThreadUtils.java:369)
+	at org.knime.core.util.ThreadUtils$RunnableWithContext.run(ThreadUtils.java:223)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+WARN 	 KNIME-Worker-0-Joiner 3:46 Node	 Node created an empty data table.
+WARN 	 KNIME-Worker-5-DB Writer 3:2 Node	 Node created an empty data table.
+WARN 	 KNIME-Worker-12-Joiner 3:49 Node	 Node created an empty data table.
+WARN 	 KNIME-Worker-1-DB Writer 3:12 Node	 Node created an empty data table.
+
+
+===== KNIME RUN START 2025-08-14T03:08:03.704919Z =====
+Command: C:\Users\MAT_C\AppData\Local\Programs\KNIME\knime.exe -nosplash -application org.knime.product.KNIME_BATCH_APPLICATION -workflowFile=C:\Users\MAT_C\Desktop\U fidelitas\Data-warehouse-bases-de-datos-multidimensionales\proyecto\Proyecto_DataWarehouse-SQL\KNIME_retail.knwf -consoleLog
+
+===== KNIME RUN END 2025-08-14T03:08:37.542420Z ReturnCode=4 =====
+WARN 	 main Node	 DB Connection no longer available. Go to advanced settings to enable connection restoration.
+WARN 	 main Node	 Node created an empty data table.
+WARN 	 main Node	 Node created an empty data table.
+WARN 	 main Node	 Node created an empty data table.
+WARN 	 main Node	 Node created an empty data table.
+WARN 	 main Node	 Node created an empty data table.
+WARN 	 main Node	 Execute failed: Cannot insert the value NULL into column 'EmployeeID', table 'Northwind.dbo.DimEmployee'; column does not allow nulls. INSERT fails.
+WARN 	 main Node	 Database connection does not exist. Please reset the corresponding connector node.
+WARN 	 main Node	 Node created an empty data table.
+
+
+===== KNIME RUN START 2025-08-14T03:10:15.698710Z =====
+Command: C:\Users\MAT_C\AppData\Local\Programs\KNIME\knime.exe -nosplash -application org.knime.product.KNIME_BATCH_APPLICATION -workflowFile=C:\Users\MAT_C\Desktop\U fidelitas\Data-warehouse-bases-de-datos-multidimensionales\proyecto\Proyecto_DataWarehouse-SQL\KNIME_retail.knwf -consoleLog
+
+===== KNIME RUN END 2025-08-14T03:10:23.848795Z ReturnCode=4 =====
+WARN 	 main Node	 DB Connection no longer available. Go to advanced settings to enable connection restoration.
+WARN 	 main Node	 Selected database driver is deprecated.
+The selected database driver is outdated and might contain security vulnerabilities. It will be moved to a separate extension that requires manual installation with one of the next releases.
+WARN 	 main Node	 The node configuration changed and the table spec will be recalculated during execution.
+WARN 	 main Node	 Node created an empty data table.
+WARN 	 main Node	 Node created an empty data table.
+WARN 	 main Node	 Node created an empty data table.
+WARN 	 main Node	 Node created an empty data table.
+WARN 	 main Node	 Node created an empty data table.
+WARN 	 main Node	 Node created an empty data table.
+WARN 	 main Node	 Node created an empty data table.
+WARN 	 main Node	 Node created an empty data table.
+ERROR	 KNIME-Worker-0-Microsoft SQL Server Connector 3:1 Node	 Execute failed: I/O Error: Se ha anulado una conexión establecida por el software en su equipo host.
+java.sql.SQLException: I/O Error: Se ha anulado una conexión establecida por el software en su equipo host.
+	at net.sourceforge.jtds.jdbc.TdsCore.nextToken(TdsCore.java:2481)
+	at net.sourceforge.jtds.jdbc.TdsCore.login(TdsCore.java:632)
+	at net.sourceforge.jtds.jdbc.JtdsConnection.<init>(JtdsConnection.java:371)
+	at net.sourceforge.jtds.jdbc.Driver.connect(Driver.java:184)
+	at org.knime.database.connection.UrlDBConnectionController$ControlledDriver.connect(UrlDBConnectionController.java:103)
+	at org.knime.database.connection.UrlDBConnectionController.connect(UrlDBConnectionController.java:368)
+	at org.knime.database.connection.UserDBConnectionController.connect(UserDBConnectionController.java:306)
+	at org.knime.database.connection.UrlDBConnectionController.createConnection(UrlDBConnectionController.java:348)
+	at org.knime.database.connection.AbstractConnectionProvider.createConnection(AbstractConnectionProvider.java:103)
+	at org.knime.database.connection.impl.DBConnectionManager.lambda$4(DBConnectionManager.java:594)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+Caused by: java.net.SocketException: Se ha anulado una conexión establecida por el software en su equipo host.
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(Unknown Source)
+	at java.base/sun.nio.ch.NioSocketImpl.read(Unknown Source)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(Unknown Source)
+	at java.base/java.net.Socket$SocketInputStream.read(Unknown Source)
+	at java.base/java.io.DataInputStream.readFully(Unknown Source)
+	at java.base/java.io.DataInputStream.readFully(Unknown Source)
+	at net.sourceforge.jtds.jdbc.SharedSocket.readPacket(SharedSocket.java:850)
+	at net.sourceforge.jtds.jdbc.SharedSocket.getNetPacket(SharedSocket.java:731)
+	at net.sourceforge.jtds.jdbc.ResponseStream.getPacket(ResponseStream.java:477)
+	at net.sourceforge.jtds.jdbc.ResponseStream.read(ResponseStream.java:114)
+	at net.sourceforge.jtds.jdbc.TdsCore.nextToken(TdsCore.java:2368)
+	... 13 more
+WARN 	 KNIME-Worker-0-Microsoft SQL Server Connector 3:1 Node	 Selected database driver is deprecated.
+The selected database driver is outdated and might contain security vulnerabilities. It will be moved to a separate extension that requires manual installation with one of the next releases.
+
+
+===== KNIME RUN START 2025-08-14T03:12:09.689103Z =====
+Command: C:\Users\MAT_C\AppData\Local\Programs\KNIME\knime.exe -nosplash -application org.knime.product.KNIME_BATCH_APPLICATION -workflowFile=C:\Users\MAT_C\Desktop\U fidelitas\Data-warehouse-bases-de-datos-multidimensionales\proyecto\Proyecto_DataWarehouse-SQL\KNIME_retail.knwf -consoleLog
+
+===== KNIME RUN END 2025-08-14T03:12:26.871321Z ReturnCode=4 =====
+WARN 	 main Node	 Execute failed: I/O Error: Se ha anulado una conexión establecida por el software en su equipo host.
+WARN 	 main Node	 Selected database driver is deprecated.
+The selected database driver is outdated and might contain security vulnerabilities. It will be moved to a separate extension that requires manual installation with one of the next releases.
+ERROR	 KNIME-Worker-0-Microsoft SQL Server Connector 3:1 Node	 Execute failed: I/O Error: Se ha anulado una conexión establecida por el software en su equipo host.
+java.sql.SQLException: I/O Error: Se ha anulado una conexión establecida por el software en su equipo host.
+	at net.sourceforge.jtds.jdbc.TdsCore.nextToken(TdsCore.java:2481)
+	at net.sourceforge.jtds.jdbc.TdsCore.login(TdsCore.java:632)
+	at net.sourceforge.jtds.jdbc.JtdsConnection.<init>(JtdsConnection.java:371)
+	at net.sourceforge.jtds.jdbc.Driver.connect(Driver.java:184)
+	at org.knime.database.connection.UrlDBConnectionController$ControlledDriver.connect(UrlDBConnectionController.java:103)
+	at org.knime.database.connection.UrlDBConnectionController.connect(UrlDBConnectionController.java:368)
+	at org.knime.database.connection.UserDBConnectionController.connect(UserDBConnectionController.java:306)
+	at org.knime.database.connection.UrlDBConnectionController.createConnection(UrlDBConnectionController.java:348)
+	at org.knime.database.connection.AbstractConnectionProvider.createConnection(AbstractConnectionProvider.java:103)
+	at org.knime.database.connection.impl.DBConnectionManager.lambda$4(DBConnectionManager.java:594)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+Caused by: java.net.SocketException: Se ha anulado una conexión establecida por el software en su equipo host.
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(Unknown Source)
+	at java.base/sun.nio.ch.NioSocketImpl.read(Unknown Source)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(Unknown Source)
+	at java.base/java.net.Socket$SocketInputStream.read(Unknown Source)
+	at java.base/java.io.DataInputStream.readFully(Unknown Source)
+	at java.base/java.io.DataInputStream.readFully(Unknown Source)
+	at net.sourceforge.jtds.jdbc.SharedSocket.readPacket(SharedSocket.java:850)
+	at net.sourceforge.jtds.jdbc.SharedSocket.getNetPacket(SharedSocket.java:731)
+	at net.sourceforge.jtds.jdbc.ResponseStream.getPacket(ResponseStream.java:477)
+	at net.sourceforge.jtds.jdbc.ResponseStream.read(ResponseStream.java:114)
+	at net.sourceforge.jtds.jdbc.TdsCore.nextToken(TdsCore.java:2368)
+	... 13 more
+WARN 	 KNIME-Worker-0-Microsoft SQL Server Connector 3:1 Node	 Selected database driver is deprecated.
+The selected database driver is outdated and might contain security vulnerabilities. It will be moved to a separate extension that requires manual installation with one of the next releases.
+
+
+===== KNIME RUN START 2025-08-14T03:26:55.029689Z =====
+Command: C:\Users\MAT_C\AppData\Local\Programs\KNIME\knime.exe -nosplash -application org.knime.product.KNIME_BATCH_APPLICATION -workflowFile=C:\Users\MAT_C\Desktop\U fidelitas\Data-warehouse-bases-de-datos-multidimensionales\proyecto\Proyecto_DataWarehouse-SQL\KNIME_retail.knwf -consoleLog
+
+===== KNIME RUN END 2025-08-14T03:28:53.876850Z ReturnCode=4 =====
+WARN 	 main Node	 Execute failed: I/O Error: Se ha anulado una conexión establecida por el software en su equipo host.
+WARN 	 main Node	 Selected database driver is deprecated.
+The selected database driver is outdated and might contain security vulnerabilities. It will be moved to a separate extension that requires manual installation with one of the next releases.
+WARN 	 KNIME-Worker-10-Joiner 3:59 Node	 Node created an empty data table.
+WARN 	 KNIME-Worker-6-Joiner 3:61 Node	 Node created an empty data table.
+WARN 	 KNIME-Worker-0-Joiner 3:46 Node	 Node created an empty data table.
+WARN 	 KNIME-Worker-8-DB Writer 3:16 Node	 Node created an empty data table.
+WARN 	 KNIME-Worker-3-DB Writer 3:20 Node	 Node created an empty data table.
+WARN 	 KNIME-Worker-4-DB Writer 3:2 Node	 Node created an empty data table.
+WARN 	 KNIME-Worker-1-Joiner 3:49 Node	 Node created an empty data table.
+WARN 	 KNIME-Worker-10-DB Writer 3:12 Node	 Node created an empty data table.
+
+
+===== KNIME RUN START 2025-08-15T04:17:00.314822Z =====
+Command: C:\Users\MAT_C\AppData\Local\Programs\KNIME\knime.exe -nosplash -application org.knime.product.KNIME_BATCH_APPLICATION -workflowFile=C:\Users\MAT_C\Desktop\U fidelitas\Data-warehouse-bases-de-datos-multidimensionales\proyecto\Proyecto_DataWarehouse-SQL\KNIME_retail.knwf -consoleLog
+
+===== KNIME RUN END 2025-08-15T04:17:27.157044Z ReturnCode=0 =====
+WARN 	 main Node	 DB Connection no longer available. Go to advanced settings to enable connection restoration.
+WARN 	 main Node	 Node created an empty data table.
+WARN 	 main Node	 Node created an empty data table.
+WARN 	 main Node	 Node created an empty data table.
+WARN 	 main Node	 Node created an empty data table.
+WARN 	 main Node	 Node created an empty data table.
+WARN 	 main Node	 Node created an empty data table.
+WARN 	 main Node	 Node created an empty data table.
+WARN 	 main Node	 Node created an empty data table.
+
+
+===== KNIME RUN START 2025-08-15T04:44:22.253358Z =====
+Command: C:\Users\MAT_C\AppData\Local\Programs\KNIME\knime.exe -nosplash -application org.knime.product.KNIME_BATCH_APPLICATION -workflowFile=C:\Users\MAT_C\Desktop\U fidelitas\Data-warehouse-bases-de-datos-multidimensionales\proyecto\Proyecto_DataWarehouse-SQL\KNIME_retail.knwf -consoleLog
+
+===== KNIME RUN END 2025-08-15T04:44:28.202810Z ReturnCode=0 =====
+WARN 	 main Node	 DB Connection no longer available. Go to advanced settings to enable connection restoration.
+WARN 	 main Node	 Node created an empty data table.
+WARN 	 main Node	 Node created an empty data table.
+WARN 	 main Node	 Node created an empty data table.
+WARN 	 main Node	 Node created an empty data table.
+WARN 	 main Node	 Node created an empty data table.
+WARN 	 main Node	 Node created an empty data table.
+WARN 	 main Node	 Node created an empty data table.
+WARN 	 main Node	 Node created an empty data table.
+
+
+===== KNIME RUN START 2025-08-15T04:44:35.348869Z =====
+Command: C:\Users\MAT_C\AppData\Local\Programs\KNIME\knime.exe -nosplash -application org.knime.product.KNIME_BATCH_APPLICATION -workflowFile=C:\Users\MAT_C\Desktop\U fidelitas\Data-warehouse-bases-de-datos-multidimensionales\proyecto\Proyecto_DataWarehouse-SQL\KNIME_retail.knwf -consoleLog
+
+===== KNIME RUN END 2025-08-15T04:44:40.842615Z ReturnCode=0 =====
+WARN 	 main Node	 DB Connection no longer available. Go to advanced settings to enable connection restoration.
+WARN 	 main Node	 Node created an empty data table.
+WARN 	 main Node	 Node created an empty data table.
+WARN 	 main Node	 Node created an empty data table.
+WARN 	 main Node	 Node created an empty data table.
+WARN 	 main Node	 Node created an empty data table.
+WARN 	 main Node	 Node created an empty data table.
+WARN 	 main Node	 Node created an empty data table.
+WARN 	 main Node	 Node created an empty data table.
+
+
+===== KNIME RUN START 2025-08-15T04:46:13.253927Z =====
+Command: C:\Users\MAT_C\AppData\Local\Programs\KNIME\knime.exe -nosplash -application org.knime.product.KNIME_BATCH_APPLICATION -workflowFile=C:\Users\MAT_C\Desktop\U fidelitas\Data-warehouse-bases-de-datos-multidimensionales\proyecto\Proyecto_DataWarehouse-SQL\KNIME_retail.knwf -consoleLog
+
+===== KNIME RUN END 2025-08-15T04:46:18.681203Z ReturnCode=0 =====
+WARN 	 main Node	 DB Connection no longer available. Go to advanced settings to enable connection restoration.
+WARN 	 main Node	 Node created an empty data table.
+WARN 	 main Node	 Node created an empty data table.
+WARN 	 main Node	 Node created an empty data table.
+WARN 	 main Node	 Node created an empty data table.
+WARN 	 main Node	 Node created an empty data table.
+WARN 	 main Node	 Node created an empty data table.
+WARN 	 main Node	 Node created an empty data table.
+WARN 	 main Node	 Node created an empty data table.
+
+
+===== KNIME RUN START 2025-08-15T04:46:29.503548Z =====
+Command: C:\Users\MAT_C\AppData\Local\Programs\KNIME\knime.exe -nosplash -application org.knime.product.KNIME_BATCH_APPLICATION -workflowFile=C:\Users\MAT_C\Desktop\U fidelitas\Data-warehouse-bases-de-datos-multidimensionales\proyecto\Proyecto_DataWarehouse-SQL\KNIME_retail.knwf -consoleLog
+
+===== KNIME RUN END 2025-08-15T04:46:35.178547Z ReturnCode=0 =====
+WARN 	 main Node	 DB Connection no longer available. Go to advanced settings to enable connection restoration.
+WARN 	 main Node	 Node created an empty data table.
+WARN 	 main Node	 Node created an empty data table.
+WARN 	 main Node	 Node created an empty data table.
+WARN 	 main Node	 Node created an empty data table.
+WARN 	 main Node	 Node created an empty data table.
+WARN 	 main Node	 Node created an empty data table.
+WARN 	 main Node	 Node created an empty data table.
+WARN 	 main Node	 Node created an empty data table.
+
+
+===== KNIME RUN START 2025-08-15T04:46:43.558363Z =====
+Command: C:\Users\MAT_C\AppData\Local\Programs\KNIME\knime.exe -nosplash -application org.knime.product.KNIME_BATCH_APPLICATION -workflowFile=C:\Users\MAT_C\Desktop\U fidelitas\Data-warehouse-bases-de-datos-multidimensionales\proyecto\Proyecto_DataWarehouse-SQL\KNIME_retail.knwf -consoleLog
+
+===== KNIME RUN END 2025-08-15T04:46:49.008386Z ReturnCode=0 =====
+WARN 	 main Node	 DB Connection no longer available. Go to advanced settings to enable connection restoration.
+WARN 	 main Node	 Node created an empty data table.
+WARN 	 main Node	 Node created an empty data table.
+WARN 	 main Node	 Node created an empty data table.
+WARN 	 main Node	 Node created an empty data table.
+WARN 	 main Node	 Node created an empty data table.
+WARN 	 main Node	 Node created an empty data table.
+WARN 	 main Node	 Node created an empty data table.
+WARN 	 main Node	 Node created an empty data table.
+
+
+===== KNIME RUN START 2025-08-15T04:52:51.822014Z =====
+Command: C:\Users\MAT_C\AppData\Local\Programs\KNIME\knime.exe -nosplash -application org.knime.product.KNIME_BATCH_APPLICATION -workflowFile=C:\Users\MAT_C\Desktop\U fidelitas\Data-warehouse-bases-de-datos-multidimensionales\proyecto\Proyecto_DataWarehouse-SQL\KNIME_retail.knwf -consoleLog
+
+===== KNIME RUN END 2025-08-15T04:52:57.532045Z ReturnCode=0 =====
+WARN 	 main Node	 Selected database driver is deprecated.
+The selected database driver is outdated and might contain security vulnerabilities. It will be moved to a separate extension that requires manual installation with one of the next releases.
+WARN 	 main Node	 Selected database driver is deprecated.
+The selected database driver is outdated and might contain security vulnerabilities. It will be moved to a separate extension that requires manual installation with one of the next releases.
+WARN 	 main Node	 The node configuration changed and the table spec will be recalculated during execution.
+WARN 	 main Node	 The node configuration changed and the table spec will be recalculated during execution.
+WARN 	 KNIME-Worker-2-Joiner 3:46 Node	 Node created an empty data table.
+WARN 	 KNIME-Worker-23-DB Writer 3:2 Node	 Node created an empty data table.
+WARN 	 KNIME-Worker-12-Joiner 3:61 Node	 Node created an empty data table.
+WARN 	 KNIME-Worker-22-DB Writer 3:20 Node	 Node created an empty data table.
+
+
+===== KNIME RUN START 2025-08-15T04:56:46.219125Z =====
+Command: C:\Users\MAT_C\AppData\Local\Programs\KNIME\knime.exe -nosplash -application org.knime.product.KNIME_BATCH_APPLICATION -workflowFile=C:\Users\MAT_C\Desktop\U fidelitas\Data-warehouse-bases-de-datos-multidimensionales\proyecto\Proyecto_DataWarehouse-SQL\KNIME_retail.knwf -consoleLog
+
+===== KNIME RUN END 2025-08-15T04:56:53.305195Z ReturnCode=0 =====
+WARN 	 main Node	 DB Connection no longer available. Go to advanced settings to enable connection restoration.
+WARN 	 main Node	 Node created an empty data table.
+WARN 	 main Node	 Node created an empty data table.
+WARN 	 main Node	 Node created an empty data table.
+WARN 	 main Node	 Node created an empty data table.
+
+
+===== KNIME RUN START 2025-08-18T04:28:58.252275Z =====
+Command: C:\Users\MAT_C\AppData\Local\Programs\KNIME\knime.exe -nosplash -application org.knime.product.KNIME_BATCH_APPLICATION -workflowFile=C:\Users\MAT_C\Desktop\U fidelitas\Data-warehouse-bases-de-datos-multidimensionales\proyecto\Proyecto_DataWarehouse-SQL\KNIME_retail.knwf -consoleLog
+
+===== KNIME RUN END 2025-08-18T04:29:29.196615Z ReturnCode=0 =====
+WARN 	 main Node	 DB Connection no longer available. Go to advanced settings to enable connection restoration.
+WARN 	 main Node	 Node created an empty data table.
+WARN 	 main Node	 Node created an empty data table.
+WARN 	 main Node	 Node created an empty data table.
+WARN 	 main Node	 Node created an empty data table.
+
+
+===== KNIME RUN START 2025-08-19T00:54:13.246025Z =====
+Command: C:\Users\MAT_C\AppData\Local\Programs\KNIME\knime.exe -nosplash -application org.knime.product.KNIME_BATCH_APPLICATION -workflowFile=C:\Users\MAT_C\Desktop\U fidelitas\Data-warehouse-bases-de-datos-multidimensionales\proyecto\Proyecto_DataWarehouse-SQL\KNIME_retail.knwf -consoleLog
+
+===== KNIME RUN END 2025-08-19T00:54:45.289718Z ReturnCode=0 =====
